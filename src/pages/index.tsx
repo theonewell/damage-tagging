@@ -19,7 +19,7 @@ export default function Home() {
 
         // Create the mask layer image
         const img = new Image();
-        img.src = '/mask.png';
+        img.src = '/hoodie_mask.png';
 
         if (!ctx) {
             return; // TODO handle error if failed canvas context
@@ -100,7 +100,7 @@ export default function Home() {
                 {/* Image view, click layer, and damage point overlay */}
                 <div className={'w-full h-full p-12 flex items-center justify-center'}>
                     <div className="relative">
-                        <img alt={'Hoodie image for wear tagging'} ref={imageRef} src={'/image.png'} className="object-fill h-[450px] cursor-pointer" onClick={handleImageClick} />
+                        <img alt={'Hoodie image for wear tagging'} ref={imageRef} src={'/hoodie_image.png'} className="object-fill h-[450px] cursor-pointer" onClick={handleImageClick} />
                         {damagePoints.map((damage, index) => (
                             <DamagePointDot key={`${index}-${damage.location}`} damage={damage} index={index} />
                         ))}
